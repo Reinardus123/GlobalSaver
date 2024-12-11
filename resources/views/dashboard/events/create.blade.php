@@ -10,7 +10,7 @@
       <form method="post" action="/dashboard/events" class="mb-5" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
-          <label for="title" class="form-label">Title</label>
+          <label for="title" class="form-label">@lang('events.judul')</label>
           <input type="text" class="form-control @error('title')
               is-invalid
           @enderror" id="title" name="title" required autofocus value="{{old('title')}}">
@@ -34,7 +34,7 @@
           </div>
 
           <div class="mb-3">
-            <label for="category" class="form-label">Category</label>
+            <label for="category" class="form-label">@lang('events.kategori')</label>
             <select class="form-select" name="category_id">
                 @foreach ( $categories as $category )
                 @if (old('category_id') == $category->id)
@@ -48,7 +48,7 @@
           </div>
 
           <div class="mb-3">
-            <label for="title" class="form-label">Price</label>
+            <label for="title" class="form-label">@lang('events.harga')</label>
             <input type="text" class="form-control @error('price')
                 is-invalid
             @enderror" id="price" name="price" required autofocus value="{{old('price')}}">
@@ -60,7 +60,7 @@
           </div>
 
           <div class="mb-3">
-            <label for="image" class="form-label">Event Image</label>
+            <label for="image" class="form-label">@lang('events.gambar')</label>
             <img class="img-preview img-fluid mb-3 col-sm-5">
             <input class="form-control @error('image')
                 is-invalid

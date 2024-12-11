@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->string('image')->nullable();
             $table->text('body');
-            $table->double('price');
+            $table->bigInteger('price');
             $table->timestamp('published_at')->nullable();
             $table->timestamps();
         });

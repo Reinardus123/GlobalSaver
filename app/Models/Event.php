@@ -55,6 +55,10 @@ class Event extends Model
         return 'slug';
     }
 
+    public function book(){
+        return $this->hasOne(Book::class);
+    }
+
     public function sluggable(): array
     {
         return [
@@ -63,4 +67,5 @@ class Event extends Model
             ]
         ];
     }
+
 }

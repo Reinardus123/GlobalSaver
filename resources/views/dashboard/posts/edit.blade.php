@@ -13,7 +13,7 @@
       @method('put')
         @csrf
         <div class="mb-3">
-          <label for="title" class="form-label">Title</label>
+          <label for="title" class="form-label">@lang('posts.judul')</label>
           <input type="text" class="form-control @error('title')
             is-invalid
           @enderror" id="title" name="title" required autofocus value="{{old('title', $post->title)}}">
@@ -36,7 +36,7 @@
           </div>
 
           <div class="mb-3">
-            <label for="image" class="form-label">Insert Image</label>
+            <label for="image" class="form-label">@lang('posts.gambar')</label>
             <input type="hidden" name="oldImage" value="{{$post->images}}">
             @if ($post->image)
             <img src="{{asset('storage/' .$post->image)}}" class="img-fluid mb-3 col-sm-5 d-block">
@@ -56,7 +56,7 @@
           </div>
 
         <div class="mb-3">
-            <label for="category" class="form-label">Category</label>
+            <label for="category" class="form-label">@lang('posts.kategori')</label>
             <select class="form-select" name="category_id">
                 @foreach ($categories as $category)
                 @if (old('category_id',$post->category_id) == $category->id)

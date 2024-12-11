@@ -51,7 +51,7 @@ class DashboardPostController extends Controller
             'title' => 'required|max:255',
             'slug' => 'required|unique:posts',
             'category_id' => 'required',
-            'image' => 'image|file|max:1024',
+            'image' => 'image|file|max:2500',
             'body' => 'required'
         ]);
         if($request->file('image')){
@@ -129,7 +129,7 @@ class DashboardPostController extends Controller
         Post::where('id',$post->id)
             ->update($validatedData);
 
-        return redirect('dashboard/posts')->with('success','Event has been updated!');
+        return redirect('dashboard/posts')->with('success','Blog has been updated!');
     
     }
 

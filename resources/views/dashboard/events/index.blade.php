@@ -15,13 +15,13 @@
   @endif
 
   <div class="table-responsive">
-    <a href="/dashboard/events/create" class="btn btn-primary mb-3">Create New Event</a>    
+    <a href="/dashboard/events/create" class="btn btn-primary mb-3">@lang('events.buat_event_baru')</a>    
     <table class="table table-striped table-sm">
       <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">Title</th>
-          <th scope="col">Category</th>
+          <th scope="col">@lang('events.judul')</th>
+          <th scope="col">@lang('events.kategori')</th>
           <th scope="col">Action</th>
         </tr>
       </thead>
@@ -51,7 +51,8 @@
     </table>
   </div>
 
-  <a href="/events" class="btn btn-primary"> Back to Events</a>
+  <a href="/events" class="btn btn-primary">@lang('events.kembali_ke_event')</a>
 
 @endsection
+
 

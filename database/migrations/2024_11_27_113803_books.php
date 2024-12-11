@@ -13,11 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('book',function(Blueprint $table){
+        Schema::create('books',function(Blueprint $table){
             $table->id();
-            $table->string('name');
+            $table->string('first_name');
+            $table->string('last_name');       
             $table->string('phone');
-            $table->double('price');
+            $table->string('email');
             $table->timestamps();
             $table->enum('status',['Unpaid','Paid']);
         });

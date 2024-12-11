@@ -14,13 +14,13 @@
   @endif
 
   <div class="table-responsive ">
-    <a href="/dashboard/posts/create" class="btn btn-primary mb-3">Create new posts</a>
+    <a href="/dashboard/posts/create" class="btn btn-primary mb-3">@lang('posts.buat_post_baru')</a>
     <table class="table table-striped table-sm">
       <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">Title</th>
-          <th scope="col">Category</th>
+          <th scope="col">@lang('posts.judul')</th>
+          <th scope="col">@lang('posts.kategori')</th>
           <th scope="col">Action</th>
         </tr>
       </thead>
@@ -49,7 +49,7 @@
       </tbody>
     </table>
     
-     <a href="/posts" class="btn btn-primary"> Back to Post</a>
+     <a href="/posts" class="btn btn-primary">@lang('posts.kembali_ke_post')</a>
   </div>
 
   <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>

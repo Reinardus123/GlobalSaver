@@ -24,6 +24,7 @@ class EventController extends Controller
             $author = User::firstWhere('username', request('author'));
             $title = 'by' . $author->name;
         }
+
         return view('events',[
             "title" => "All Events " .  $title,
             "active" => 'events',
