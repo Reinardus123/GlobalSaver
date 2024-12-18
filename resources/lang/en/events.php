@@ -24,7 +24,8 @@ return [
     'nomor_handphone' => 'Phone Number',
     'Email' => 'Email',
     'checkout' => 'Continue to Checkout',
-    'semua' => 'All Events'
+    'semua' => 'All Events',
+    'date' => 'Date And Time'
     
 
 ];

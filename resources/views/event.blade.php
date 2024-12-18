@@ -9,6 +9,7 @@
             <p>By. <a href="/authors/{{$event->author->username}}" class="text-decoration-none" style="color: white">
                 {{$event->author->name}}</a> in <a href="/categories/{{$event->category->slug}}" class="text-decoration-none" style="color: white">{{$event->category->name}}</a></p>
                 <h6 class="my-2">Price : Rp {{$event->price}}</h6>
+                <h6 class="my-2">Date : {{$event->created_at}}</h6>
                 @if($event->image)
                     <div style="max-height: 350px; overflow:hidden; ">
                         <img src="{{asset('storage/' . $event->image)}}" alt="{{$event->category->name}}">

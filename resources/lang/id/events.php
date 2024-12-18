@@ -23,7 +23,8 @@ return [
     'nama_belakang' => 'Nama Belakang',
     'nomor_handphone' => 'Nomor Handphone',
     'Email' => 'Email',
-    'checkout' => 'Lanjutkan Pembayaran'
+    'checkout' => 'Lanjutkan Pembayaran',
+    'date' => 'Tanggal dan Waktu'
 ];
 
 

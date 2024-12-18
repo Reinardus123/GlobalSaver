@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::factory(5)->create();
+        // User::factory(5)->create();
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
@@ -88,8 +88,8 @@ class DatabaseSeeder extends Seeder
     // }
 
     User::factory(3)->create();
-    Post::factory(20)->create();
-    Event::factory(20)->create();
+    Post::factory(3)->create();
+    Event::factory(3)->create();
 }   
 
 

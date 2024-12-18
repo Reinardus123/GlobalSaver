@@ -81,6 +81,18 @@
           </div>
 
           <div class="mb-3">
+            <label for="date" class="form-label">Date</label>
+            <input type="text" class="form-control @error('date')
+                is-invalid
+            @enderror" id="date" name="date" required autofocus value="{{old('date')}}">
+            @error('date')
+                <div class="invalid-feedback">
+                  {{$message}}
+                </div>
+            @enderror
+          </div>
+
+          <div class="mb-3">
             <label for="body" class="form-label">Body</label>
             @error('body')
                 <p class="text-danger">{{$message}}</p>

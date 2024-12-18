@@ -79,7 +79,7 @@
 @endif
 
 <div class="d-flex justify-content-end">
-{{-- {{ $posts->links()}} --}}
+  {{$events->links()}}
 </div>
 @endsection
 

@@ -30,7 +30,7 @@ class EventController extends Controller
             "active" => 'events',
             // "posts" => Post::latest()->get(),
             "events" => Event::latest()->filter(request(['search', 'category', 'author']))
-            ->paginate(7)->withQueryString()
+            ->paginate(4)->withQueryString()
         ]);
     }
 

@@ -20,6 +20,7 @@ class BookController extends Controller
         $book = Book::create($request->all());
 
 
+
         \Midtrans\Config::$serverKey = config('midtrans.server_key');
         // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
         \Midtrans\Config::$isProduction = false;
@@ -59,9 +60,11 @@ class BookController extends Controller
         }
     }
 
-    public function invoice($id){
-        $book = Book::find($id);
-        return view('invoice',compact('book'));
+    public function invoice(){
+        return view('invoice',[
+            'title' => "Invoice",
+            'active' => "Invoice"
+        ]);
     }
 
 }

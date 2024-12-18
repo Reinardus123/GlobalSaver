@@ -48,7 +48,7 @@
           </div>
 
           <div class="mb-3">
-            <label for="title" class="form-label">@lang('events.harga')</label>
+            <label for="price" class="form-label">@lang('events.harga')</label>
             <input type="text" class="form-control @error('price')
                 is-invalid
             @enderror" id="price" name="price" required autofocus value="{{old('price')}}">
@@ -78,7 +78,7 @@
             @error('body')
                 <p class="text-danger">{{$message}}</p>
             @enderror
-            <input id="body" type="hidden" name="body">
+            <input id="body" type="hidden" name="body" value="{{old ('body')}}">
             <trix-editor input="body"></trix-editor>
           </div>
         
